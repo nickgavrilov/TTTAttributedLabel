@@ -281,7 +281,7 @@ static inline CGSize CTFramesetterSuggestFrameSizeForAttributedStringWithConstra
     self.multipleTouchEnabled = NO;
 #endif
     
-    self.enabledTextCheckingTypes = NSTextCheckingTypeLink
+    self.enabledTextCheckingTypes = NSTextCheckingTypeLink;
     
     self.textInsets = UIEdgeInsetsZero;
     self.lineHeightMultiple = 1.0f;
