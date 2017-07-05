@@ -1451,6 +1451,8 @@ afterInheritingLabelAttributesAndConfiguringWithBlock:(NSMutableAttributedString
                 if ([self.delegate respondsToSelector:@selector(attributedLabel:didSelectLinkWithURL:)]) {
                     [self.delegate attributedLabel:self didSelectLinkWithURL:result.URL];
                     return;
+                } else {
+                    [[UIApplication sharedApplication] openURL:result.URL];
                 }
                 break;
             case NSTextCheckingTypeAddress:
@@ -1533,6 +1535,8 @@ afterInheritingLabelAttributesAndConfiguringWithBlock:(NSMutableAttributedString
                         if ([self.delegate respondsToSelector:@selector(attributedLabel:didLongPressLinkWithURL:atPoint:)]) {
                             [self.delegate attributedLabel:self didLongPressLinkWithURL:result.URL atPoint:touchPoint];
                             return;
+                        } else {
+                            [[UIApplication sharedApplication] openURL:result.URL];
                         }
                         break;
                     case NSTextCheckingTypeAddress:
